@@ -1,213 +1,176 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>UoN | Blue Castle | My Marks</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Fonts and Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="/content/images/favicon32.png" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>University of Nottingham Ningbo China - Marks Report</title>
   <style>
     body {
-      font-family: 'Times New Roman', serif;
-      font-size: 14px;
-      background-color: #f7f9fc;
+      font-family: "Helvetica", sans-serif;
+      background-color: #f9f9f9;
       color: #333;
       margin: 0;
-      padding: 0;
+      padding: 20px;
     }
 
-    header, footer {
-      background-color: #003366;
-      color: white;
-      padding: 2rem;
+    header {
+      text-align: center;
+      padding-bottom: 20px;
     }
 
-    header h1 a {
-      color: white;
-      text-decoration: none;
+    h1 {
+      font-size: 28px;
+      margin: 0;
     }
 
-    .welcome {
-      text-align: right;
-      margin-top: -2rem;
+    .student-info {
+      margin-bottom: 30px;
     }
 
-    .wrapper {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #003366;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      background-color: #e6f0fa;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      background-color: #d0e7ff;
-    }
-
-    h2 {
-      border-bottom: 2px solid #003366;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+    .student-info strong {
+      display: inline-block;
+      width: 150px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1.5rem;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     th, td {
-      padding: 0.75rem;
+      border: 1px solid #ccc;
+      padding: 10px;
       text-align: left;
     }
 
-    thead {
-      background-color: #003366;
-      color: white;
+    th {
+      background-color: #eee;
     }
 
     tr:nth-child(even) {
-      background-color: #f0f4f8;
+      background-color: #f2f2f2;
     }
 
-    .disclaimer {
-      margin-top: 2rem;
-      padding: 1rem;
-      background-color: #fffbe6;
-      border-left: 4px solid #ffc107;
-      border-radius: 6px;
-    }
-
-    footer img {
-      max-height: 60px;
-      margin-right: 1rem;
-    }
-
-    footer nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    footer nav ul li a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    .transcript-print-view {
-      margin-top: 1.5rem;
-    }
-
-    .transcript-print-view a {
-      color: #0066cc;
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+      text-align: center;
     }
   </style>
 </head>
-
 <body>
   <header>
-    <h1><a href="https://www.nottingham.ac.uk" target="_blank">The University of Nottingham</a></h1>
-    <div class="welcome">
-      <form action="/Account/LogOff" method="post">
-        <span>Logged in as <strong>biyak3</strong></span>
-        <input type="submit" value="Log off →" />
-      </form>
-    </div>
+    <h1 style="font-size: 32px;">University of Nottingham Ningbo China</h1>
+    <p><em>Academic Transcript</em></p>
   </header>
 
-  <main class="wrapper">
-    <h2>My Marks</h2>
+  <section class="student-info">
+    <p><strong>Student ID:</strong> 20615997</p>
+    <p><strong>Last Name:</strong> KHARISMANTIK</p>
+    <p><strong>Given Names:</strong> Arwen</p>
+    <p><strong>Programme:</strong> BEng Hons Civil Engineering</p>
+  </section>
 
-    <p><strong>Student ID:</strong> 20615997<br />
-      <strong>Last Name:</strong> KHARISMANTIK<br />
-      <strong>Given Names:</strong> Arwen<br />
-      <strong>Programme:</strong> BEng Hons Civil Engineering
-    </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Module Code</th>
+        <th>Module Title</th>
+        <th>Credits</th>
+        <th>Semester</th>
+        <th>Mark</th>
+        <th>Resit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CELE F008</td>
+        <td>Introduction to Academic Skills</td>
+        <td>10</td>
+        <td>Autumn China</td>
+        <td>74</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CELE N042</td>
+        <td>Introduction to Business Economics</td>
+        <td>15</td>
+        <td>Autumn China</td>
+        <td>81</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CELE N045</td>
+        <td>Critical Thinking in Academic Context</td>
+        <td>15</td>
+        <td>Autumn China</td>
+        <td>69</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CELE N107</td>
+        <td>Intro to Math for Business & Econ A</td>
+        <td>10</td>
+        <td>Autumn China</td>
+        <td>73</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CELE N109</td>
+        <td>Intro to Stats for Business & Econ A</td>
+        <td>10</td>
+        <td>Autumn China</td>
+        <td>78</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CELE F006</td>
+        <td>ESAP: Science & Engineering</td>
+        <td>10</td>
+        <td>Spring China</td>
+        <td>79</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CELE N040</td>
+        <td>Foundation Chemistry</td>
+        <td>15</td>
+        <td>Spring China</td>
+        <td>37</td>
+        <td>43</td>
+      </tr>
+      <tr>
+        <td>CELE N058</td>
+        <td>Further Foundation Mechanics</td>
+        <td>15</td>
+        <td>Spring China</td>
+        <td>79</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CELE N104</td>
+        <td>Foundation Algebra B</td>
+        <td>10</td>
+        <td>Spring China</td>
+        <td>90</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CELE N106</td>
+        <td>Foundation Calculus B</td>
+        <td>10</td>
+        <td>Spring China</td>
+        <td>88</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
-    <p><strong>Provisional examination results will be published on 17/09/2025.</strong></p>
-
-    <p><strong>2023/2024</strong></p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Code</th>
-          <th>Title</th>
-          <th>Credit</th>
-          <th>Semester</th>
-          <th>Mark</th>
-          <th>First Resit</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>CELE F008</td><td>Introduction to Academic Skills</td><td>10</td><td>Autumn China</td><td>74</td><td></td></tr>
-        <tr><td>CELE N042</td><td>Introduction to Bus Economics</td><td>15</td><td>Autumn China</td><td>81</td><td></td></tr>
-        <tr><td>CELE N045</td><td>Critical Thinking in Aca Con</td><td>15</td><td>Autumn China</td><td>79</td><td></td></tr>
-        <tr><td>CELE N107</td><td>Intro to Math for Bus & Econ A</td><td>10</td><td>Autumn China</td><td>82</td><td></td></tr>
-        <tr><td>CELE N109</td><td>Intro to Stat for Bus & Econ A</td><td>10</td><td>Autumn China</td><td>87</td><td></td></tr>
-        <tr><td>CELE F006</td><td>ESAP: Science & Engineering</td><td>10</td><td>Spring China</td><td>79</td><td></td></tr>
-        <tr><td>CELE N040</td><td>Foundation Chemistry</td><td>15</td><td>Spring China</td><td>37</td><td>43</td></tr>
-        <tr><td>CELE N058</td><td>Further Foundation Mechanics</td><td>15</td><td>Spring China</td><td>79</td><td></td></tr>
-        <tr><td>CELE N104</td><td>Foundation Algebra B</td><td>10</td><td>Spring China</td><td>80</td><td></td></tr>
-        <tr><td>CELE N106</td><td>Foundation Calculus B</td><td>10</td><td>Spring China</td><td>78</td><td></td></tr>
-      </tbody>
-    </table>
-
-    <p class="transcript-print-view"><a href="/my-marks/my-transcript/?Id=biyak3" target="_blank">Print View</a></p>
-
-    <div class="disclaimer">
-      <p><strong>Note:</strong> These are provisional results. For queries, contact your Faculty Office or email <a href="mailto:Academic-Service-Office@nottingham.edu.cn">Academic Services Office</a>.</p>
-      <p>You can see your module overall marks in the My Marks profile on Blue Castle.</p>
-      <p>If you have queries about your assessment results, please contact your Faculty Office/CPSO in the first instance or e-mail Academic Services Office if you are unable to do this.</p>
-      <p>Please note:</p>
-      <ul>
-        <li>If you are a Preliminary Year student, you may receive your component marks for EAP modules and other information from CPSO@nottingham.edu.cn. Please check your university email carefully.</li>
-        <li>If you are an exchange-out student to UNUK/UNM, you shall refer to UNUK/UNM mark release portal for your marks.</li>
-        <li>If you are an exchange-out student to other institutions other than UoN, such as U21 exchange programme, you shall refer to the host institution for your results.</li>
-        <li>If your EC request has been approved of certain module/component, the marks currently displayed may be incomplete.</li>
-        <li>Any marks for full-year modules may be incomplete at autumn release.</li>
-        <li>Assessment results are correct at the time of publication but may be subject to change e.g. if you have an ongoing Extenuating Circumstances claim under consideration.</li>
-      </ul>
-    </div>
-  </main>
-
-  <footer>
-    <h4>Affiliates</h4>
-    <img src="/content/images/russell-group.png" alt="Russell Group" />
-    <img src="/content/images/universitas-21.png" alt="Universitas 21" />
-
-    <h4>Terms and Policies</h4>
-    <nav>
-      <ul>
-        <li><a href="http://www.nottingham.ac.uk/utilities/copyright.aspx" target="_blank">Copyright</a></li>
-        <li><a href="http://www.nottingham.ac.uk/utilities/privacy.aspx" target="_blank">Privacy</a></li>
-        <li><a href="http://www.nottingham.ac.uk/utilities/accessibility/accessibility.aspx" target="_blank">Accessibility</a></li>
-      </ul>
-    </nav>
-  </footer>
+  <div class="footer">
+    © University of Nottingham Ningbo China
+  </div>
 </body>
 </html>
