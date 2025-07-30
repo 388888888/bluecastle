@@ -1,125 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arwen's University Marks</title>
+  <meta charset="utf-8" />
+  <title>UoN | Blue Castle | My Marks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/content/images/favicon32.png" />
+
   <style>
     body {
-      font-family: "Times New Roman", Times, serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background-color: #fdfdfd;
+      font-family: 'Inter', serif;
+      background-color: #f7f9fc;
       color: #333;
+      margin: 0;
+      padding: 0;
     }
 
-    h1 {
-      text-align: center;
-      color: #003399;
-      font-size: 2em;
+    header, footer {
+      background-color: #003366;
+      color: white;
+      padding: 2rem;
     }
 
-    h2 {
-      border-bottom: 2px solid #ccc;
-      margin-top: 40px;
-      padding-bottom: 10px;
-    }
-
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .section p span {
-      font-weight: bold;
-    }
-
-    nav a {
-      margin-right: 15px;
-      color: #003399;
+    header h1 a {
+      color: white;
       text-decoration: none;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .welcome {
+      text-align: right;
+      margin-top: -2rem;
     }
 
-    .marks-table {
+    .wrapper {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background-color: #e6f0fa;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #d0e7ff;
+    }
+
+    h2 {
+      border-bottom: 2px solid #003366;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      margin-top: 1.5rem;
     }
 
-    .marks-table th,
-    .marks-table td {
-      border: 1px solid #ccc;
-      padding: 10px;
+    th, td {
+      padding: 0.75rem;
       text-align: left;
     }
 
-    .marks-table th {
-      background-color: #eee;
+    thead {
+      background-color: #003366;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f0f4f8;
+    }
+
+    .disclaimer {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #fffbe6;
+      border-left: 4px solid #ffc107;
+      border-radius: 6px;
+    }
+
+    footer img {
+      max-height: 60px;
+      margin-right: 1rem;
+    }
+
+    footer nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    footer nav ul li a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .transcript-print-view {
+      margin-top: 1.5rem;
+    }
+
+    .transcript-print-view a {
+      color: #0066cc;
     }
   </style>
 </head>
+
 <body>
-  <h1>The University of Nottingham</h1>
+  <header>
+    <h1><a href="https://www.nottingham.ac.uk" target="_blank">The University of Nottingham</a></h1>
+    <div class="welcome">
+      <form action="/Account/LogOff" method="post">
+        <span>Logged in as <strong>biyak3</strong></span>
+        <input type="submit" value="Log off →" />
+      </form>
+    </div>
+  </header>
 
-  <div class="section">
-    <p><span>Student ID:</span> 20615997</p>
-    <p><span>Last Name:</span> KHARISMANTIK</p>
-    <p><span>Given Names:</span> Arwen</p>
-    <p><span>Course Title:</span> BEng Civil Engineering</p>
-    <p><span>Email Address:</span> [your-email@example.com]</p>
-  </div>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">My Modules</a>
-    <a href="#">My Award</a>
-    <a href="#">My Marks</a>
-    <a href="#">My Progression</a>
-  </nav>
-
-  <div class="section">
+  <main class="wrapper">
     <h2>My Marks</h2>
-    <table class="marks-table">
+
+    <p><strong>Student ID:</strong> 20615997<br />
+      <strong>Last Name:</strong> KHARISMANTIK<br />
+      <strong>Given Names:</strong> Arwen<br />
+      <strong>Programme:</strong> BEng Hons Civil Engineering
+    </p>
+
+    <p><strong>Provisional examination results will be published on 17/09/2025.</strong></p>
+
+    <p><strong>2023/2024</strong></p>
+
+    <table>
       <thead>
         <tr>
-          <th>Module</th>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Credit</th>
+          <th>Semester</th>
           <th>Mark</th>
-          <th>Status</th>
+          <th>First Resit</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Quantitative Methods 1A</td>
-          <td>72</td>
-          <td>Passed</td>
-        </tr>
-        <tr>
-          <td>Quantitative Methods 1B</td>
-          <td>68</td>
-          <td>Passed</td>
-        </tr>
-        <tr>
-          <td>Fluid Mechanics</td>
-          <td>74</td>
-          <td>Passed</td>
-        </tr>
-        <tr>
-          <td>Engineering Geology</td>
-          <td>65</td>
-          <td>Passed</td>
-        </tr>
+        <tr><td>CELE F008</td><td>Introduction to Academic Skills</td><td>10</td><td>Autumn China</td><td>74</td><td></td></tr>
+        <tr><td>CELE N042</td><td>Introduction to Bus Economics</td><td>15</td><td>Autumn China</td><td>31</td><td>67</td></tr>
+        <tr><td>CELE N045</td><td>Critical Thinking in Aca Con</td><td>15</td><td>Autumn China</td><td>59</td><td></td></tr>
+        <tr><td>CELE N107</td><td>Intro to Math for Bus & Econ A</td><td>10</td><td>Autumn China</td><td>58</td><td></td></tr>
+        <tr><td>CELE N109</td><td>Intro to Stat for Bus & Econ A</td><td>10</td><td>Autumn China</td><td>58</td><td></td></tr>
+        <tr><td>CELE F006</td><td>ESAP: Science & Engineering</td><td>10</td><td>Spring China</td><td>79</td><td></td></tr>
+        <tr><td>CELE N040</td><td>Foundation Chemistry</td><td>15</td><td>Spring China</td><td>27</td><td>33</td></tr>
+        <tr><td>CELE N058</td><td>Further Foundation Mechanics</td><td>15</td><td>Spring China</td><td>59</td><td></td></tr>
+        <tr><td>CELE N104</td><td>Foundation Algebra B</td><td>10</td><td>Spring China</td><td>50</td><td></td></tr>
+        <tr><td>CELE N106</td><td>Foundation Calculus B</td><td>10</td><td>Spring China</td><td>28</td><td>60</td></tr>
       </tbody>
     </table>
-  </div>
+
+    <p class="transcript-print-view"><a href="/my-marks/my-transcript/?Id=biyak3" target="_blank">Print View</a></p>
+
+    <div class="disclaimer">
+      <p><strong>Note:</strong> These are provisional results. For queries, contact your Faculty Office or email <a href="mailto:Academic-Service-Office@nottingham.edu.cn">Academic Services Office</a>.</p>
+      <ul>
+        <li>Exchange students should refer to the host institution portal.</li>
+        <li>Marks may be incomplete if ECs are under consideration.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <h4>Affiliates</h4>
+    <img src="/content/images/russell-group.png" alt="Russell Group" />
+    <img src="/content/images/universitas-21.png" alt="Universitas 21" />
+
+    <h4>Terms and Policies</h4>
+    <nav>
+      <ul>
+        <li><a href="http://www.nottingham.ac.uk/utilities/copyright.aspx" target="_blank">Copyright</a></li>
+        <li><a href="http://www.nottingham.ac.uk/utilities/privacy.aspx" target="_blank">Privacy</a></li>
+        <li><a href="http://www.nottingham.ac.uk/utilities/accessibility/accessibility.aspx" target="_blank">Accessibility</a></li>
+      </ul>
+    </nav>
+  </footer>
 </body>
 </html>
