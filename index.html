@@ -1,310 +1,161 @@
-
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-    <head>
-        
-        <meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;IE=7"/>
-        <meta charset="utf-8"/>
-        <title>UoN | Blue Castle | My Marks</title>
-        <link rel="alternate" hreflang="en-gb"
-          href="https://bluecastle-results.nottingham.ac.uk" />
-        <link rel="alternate" hreflang="en-cn"
-          href="https://bluecastle-cn-results.nottingham.ac.uk" />
-        <link rel="alternate" hreflang="en-my"
-          href="https://bluecastle-my-results.nottingham.ac.uk" />
-        <link rel="icon" type="image/png" href="/content/images/favicon16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="/content/images/favicon32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="/content/images/favicon48.png" sizes="48x48" />
-        <link rel="icon" type="image/png" href="/content/images/favicon64.png" sizes="64x64" />
-        <link rel="icon" type="image/png" href="/content/images/favicon128.png" sizes="128x128" />
-		<link rel="apple-touch-icon" href="/content/images/apple-touch-icon.png" />
-		<link rel="apple-touch-icon" sizes="57x57" href="/content/images/apple-touch-icon-57x57.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="/content/images/apple-touch-icon-72x72.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="/content/images/apple-touch-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="144x144" href="/content/images/apple-touch-icon-144x144.png" />
-		<meta name="application-name" content="UoN Blue Castle"/>
-		<meta name="msapplication-TileColor" content="#003366"/>
-		<meta name="msapplication-TileImage" content="/content/images/tile.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-        <link href="/Content/style/bundle?v=LFIOwxX74Jmm2ZKr5nJF-QyvaxNW6MP4xuFFDh9dIsQ1" rel="stylesheet"/>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>UoN | Blue Castle | My Marks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    </head>
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/content/images/favicon32.png" />
 
-    <body class="logged-in">
-        <header>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
-            <h1 id="logo">
-                <a href="http://www.nottingham.ac.uk" title="The University of Nottingham" target="_blank">The University of Nottingham</a>
-            </h1>
+    header, footer {
+      background-color: #003366;
+      color: white;
+      padding: 2rem;
+    }
 
+    header h1 a {
+      color: white;
+      text-decoration: none;
+    }
 
+    .welcome {
+      text-align: right;
+      margin-top: -2rem;
+    }
 
-                
-        <div class="welcome blue">
-<form action="/Account/LogOff" id="logoutForm" method="post" title="Log Off">                <span id="details" title="My Details"></span> <span id="my-identity" title="My Details">biyak3</span>,  <input type="submit" id="logout" value="Log off &rarr;"/>
-</form>        </div>
+    .wrapper {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
 
-        <hr />
-			
-		<h4>My Details</h4>
-			
-		<div id="my-details">
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
 
-            <ul>
-				<li>Full Name</li>
-				<li>Student ID</li>
-				<li>Course Title</li>
-				<li>Email Address</li>
-			</ul>
+    nav ul li a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background-color: #e6f0fa;
+      transition: 0.3s;
+    }
 
-			<p class="close" title="Close My Details"></p>
-			
-		</div>
+    nav ul li a:hover {
+      background-color: #d0e7ff;
+    }
 
-        <hr />
+    h2 {
+      border-bottom: 2px solid #003366;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
 
-    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+    }
 
-            
-                <h4>Navigation</h4>
-    <nav>
-        <ul id="anchor-buttons">
-                <li class="show-all"><a href="/" title="Home">Home</a></li>
-                <li class="my-programme"><a href="/my-modules" title="My Modules">My Modules</a></li>
-		        <li class="my-assessments"><a href="/my-award" title="My Award">My Award</a></li>
-                <li class="my-assessments"><a href="/my-marks" title="My Marks">My Marks</a></li>
-                <li class="my-assessments"><a href="/my-progression" title="My Progression">My Progression</a></li>
-        </ul>
-			
-	    <hr />
-            
-            <ul id="page-links">
-                    <li class="show-all home"><a href="/" title="Home">Home</a></li>
-                        <li class="my-programme"><a href="/my-modules" title="My Programme">My Modules</a></li>
-                        <li class="selected my-assessments"><a href="/my-progression" title="My Progression">My Progression</a></li>
-            </ul>
-                <h4>My Assessments</h4>
-                <ul id="my-assessments">
-                        <li class="my-assessments"><a href="/my-award" title="My Award">My Award</a></li>
-                        <li class="selected my-assessments"><a href="/my-marks" title="My Award">My Marks</a></li>
-                        <li class="my-assessments"><a href="/my-progression" title="My Progression">My Progression</a></li>
-                </ul>
-    </nav>
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+    }
 
-        </header>
+    thead {
+      background-color: #003366;
+      color: white;
+    }
 
-        <hr />
+    tr:nth-child(even) {
+      background-color: #f0f4f8;
+    }
 
-        <div id="main">
-            <div class="wrapper cf">
-                
-<div class="content">
+    .disclaimer {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #fffbe6;
+      border-left: 4px solid #ffc107;
+      border-radius: 6px;
+    }
 
-    <h2 class="my-assessments">My Marks</h2>
+    footer img {
+      max-height: 60px;
+      margin-right: 1rem;
+    }
 
-    <p>
-        <strong>Student ID:</strong> 20615997 <br/>
-        <strong>Last Name:</strong> KHARISMANTIK <br/>
-        <strong>Given Names:</strong> Arwen <br/>
-        <strong>Programme:</strong > BEng Hons Civil Engineering
+    footer nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    footer nav ul li a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .transcript-print-view {
+      margin-top: 1.5rem;
+    }
+
+    .transcript-print-view a {
+      color: #0066cc;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><a href="https://www.nottingham.ac.uk" target="_blank">The University of Nottingham</a></h1>
+    <div class="welcome">
+      <form action="/Account/LogOff" method="post">
+        <span>Logged in as <strong>biyak3</strong></span>
+        <input type="submit" value="Log off →" />
+      </form>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <h2>My Marks</h2>
+
+    <p><strong>Student ID:</strong> 20615997<br />
+      <strong>Last Name:</strong> KHARISMANTIK<br />
+      <strong>Given Names:</strong> Arwen<br />
+      <strong>Programme:</strong> BEng Hons Civil Engineering
     </p>
 
-    <p>Provisional examination results will be published on 17/09/2025. </p>
-   
-                <p><strong>2023/2024</strong></p>
+    <p><strong>Provisional examination results will be published on 17/09/2025.</strong></p>
 
-    <div>
+    <p><strong>2023/2024</strong></p>
 
-
-
-    <table class="gridTable, transcript">
-    <thead>
-        <tr class="gridHead">
-            <th scope="col">
-Code            </th>
-            <th scope="col">
-Title            </th>
-            <th scope="col">
-Credit            </th>
-            <th scope="col">
-Semester            </th>
-            <th scope="col">
-Mark            </th>
-            <th scope="col">
-First Resit            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="gridRow">
-            <td>CELE     F008</td>
-            <td>Introduction to AcademicSkills</td>
-            <td>10</td>
-            <td>Autumn China</td>
-            <td> 74 </td>
-            <td>  </td>
-        </tr>
-        <tr class="gridAltRow">
-            <td>CELE     N042</td>
-            <td>Introduction to Bus Economics</td>
-            <td>15</td>
-            <td>Autumn China</td>
-            <td> 31 </td>
-            <td> 67 </td>
-        </tr>
-        <tr class="gridRow">
-            <td>CELE     N045</td>
-            <td>Critical Thinking in Aca Con</td>
-            <td>15</td>
-            <td>Autumn China</td>
-            <td> 59 </td>
-            <td>  </td>
-        </tr>
-        <tr class="gridAltRow">
-            <td>CELE     N107</td>
-            <td>Intro to Math for Bus &amp; Econ A</td>
-            <td>10</td>
-            <td>Autumn China</td>
-            <td> 58 </td>
-            <td>  </td>
-        </tr>
-        <tr class="gridRow">
-            <td>CELE     N109</td>
-            <td>Intro to Stat for Bus &amp; Econ A</td>
-            <td>10</td>
-            <td>Autumn China</td>
-            <td> 58 </td>
-            <td>  </td>
-        </tr>
-        <tr class="gridAltRow">
-            <td>CELE     F006</td>
-            <td>ESAP: Science &amp; Engineering</td>
-            <td>10</td>
-            <td>Spring China</td>
-            <td> 79 </td>
-            <td>  </td>
-        </tr>
-        <tr class="gridRow">
-            <td>CELE     N040</td>
-            <td>Foundation Chmistry</td>
-            <td>15</td>
-            <td>Spring China</td>
-            <td> 27 </td>
-            <td> 33 </td>
-        </tr>
-        <tr class="gridAltRow">
-            <td>CELE     N058</td>
-            <td>Further Foundation Mechanics</td>
-            <td>15</td>
-            <td>Spring China</td>
-            <td> 59 </td>
-            <td>  </td>
-        </tr>
-        <tr class="gridRow">
-            <td>CELE     N104</td>
-            <td>Foundation Algebra B</td>
-            <td>10</td>
-            <td>Spring China</td>
-            <td> 50 </td>
-            <td>  </td>
-        </tr>
-        <tr class="gridAltRow">
-            <td>CELE     N106</td>
-            <td>Foundation Calculus B</td>
-            <td>10</td>
-            <td>Spring China</td>
-            <td> 28 </td>
-            <td> 60 </td>
-        </tr>
-    </tbody>
-    </table>
-
-</div>
-
-    
-
-    <p class="transcript-print-view" title="Transcript Print View"><a href="/my-marks/my-transcript/?Id=biyak3" title="Print View" target="_blank">Print View</a>
-
-    <div class="disclaimer">
-        <p> You can see your module overall marks in the My Marks profile on Blue Castle. </p > 
-<p>If you have queries about your assessment results, please contact your <a href="https://www.nottingham.edu.cn/en/Schools-Departments/Directory.aspx" title="Schools and Departments">Faculty Office/CPSO</a> in the first instance or e-mail <a href="mailto:Academic-Service-Office@nottingham.edu.cn" title="Academic Services Office">Academic Services Office</a> if you are unable to do this.</p >
-  <p><strong>Please note:</strong></p >   
-<p>If you are a Preliminary Year student, you may receive your component marks for EAP modules and other information from CPSO@nottingham.edu.cn. Please check your university email carefully. </p >
-<p>If you are an exchange-out student to UNUK/UNM, you shall refer to UNUK/UNM mark release portal for your marks. </p >
-<p>If you are an exchange-out student to other institutions other than UoN, such as U21 exchange programme, you shall refer to the host institution for your results. </p >
-<p>If your EC request has been approved of certain module/component, the marks currently displayed may be incomplete. </p > 
-<p>Any marks for full-year modules may be incomplete at autumn release. </p>
-<p>Assessment results are correct at the time of publication but may be subject to change e.g. if you have an ongoing Extenuating Circumstances claim under consideration. </p >	
-
-    </div>
-
-</div>
-
-
-
-
-            </div>
-        </div>
-
-        <hr />
-
-        <footer>
-            <h4>Affiliates</h4>
-			
-            <a href="http://www.russellgroup.ac.uk/" title="Russell Group" target="_blank"><img class="sponsor russell-group" src="/Content/images/russell-group.png" title="Russell Group" alt="Russell Group"/></a>
-            <a href="http://www.universitas21.com/" title="Universitas 21" target="_blank"><img class="sponsor universitas-21" src="/Content/images/universitas-21.png" title="Universitas 21" alt="Universitas 21"/></a>
-			
-            <hr />
-			
-            <h4>Terms, Conditions and other documents</h4>
-            <p>Our terms and other documents below changed in May 2012. Please familiarise yourself with the new ones.</p>
-			
-            <nav>
-                <ul>
-                    <li><a href="http://www.nottingham.ac.uk/utilities/copyright.aspx" title="Copyright" target="_blank">Copyright</a></li>
-                    <li><a href="http://www.nottingham.ac.uk/utilities/website-terms-of-use.aspx" title="Terms and Conditions" target="_blank">Terms and Conditions</a></li>
-                    <li><a href="http://www.nottingham.ac.uk/utilities/privacy.aspx" title="Privacy and Cookies" target="_blank">Privacy and Cookies</a></li>
-                    <li><a href="http://www.nottingham.ac.uk/utilities/posting-rules.aspx" title="Posting Rules" target="_blank">Posting Rules</a></li>
-                    <li><a href="http://www.nottingham.ac.uk/utilities/accessibility/accessibility.aspx" title="Accessibility" target="_blank">Accessibility</a></li>
-                    <li><a href="http://www.nottingham.ac.uk/utilities/foi.aspx" title="Freedom of Information" target="_blank">Freedom of Information</a></li>
-                </ul>
-            </nav>
-        </footer>
-        
-         <script>
-            var UoN = UoN || {};
-            UoN.viewBag = null;
-            UoN.loggedIn = true;
-            UoN.isAdmin = false;
-        </script>
-        <script src="/ExamPortalScripts?v=R5i2t1c2MBR6Wf3Keo1Ty2dv74uCF-uG3fe8To8cv_41"></script>
-
-        <script src="/bundles/jqueryval?v=c7maFwTvA2iknj4ioJlY09tYDSwqdDTAuRGaEFVikpI1"></script>
-
-
-            <script>
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
-                { (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-                ga('create', 'UA-1555653-1', 'auto');
-                ga('send', 'pageview');
-            </script>
-        
-            <script>
-                $.sessionTimeout({
-                    keepAliveUrl: '/Account/KeepSessionAlive',
-                    keepAliveInterval: 30000,
-                    redirUrl: '/Account/LogOff?ReturnUrl=%2Fmy-marks&IsTimeout=True',
-                    logoutUrl: '/Account/LogOff?ReturnUrl=%2Fmy-marks&IsTimeout=True',
-                    warnAfter: parseInt('594000') - 60000,
-                    redirAfter: parseInt('594000'),
-                    onWarn: function() {
-                }
-                });
-            </script>
-        
-        
-        
-        
-    </body>
-</html>
+    <table>
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Credit</th>
+          <th>Semester</th>
+          <th>Mark</th>
+          <
